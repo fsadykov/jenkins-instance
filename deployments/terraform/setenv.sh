@@ -1,5 +1,5 @@
 #!/bin/bash
-echo $0
+# echo $0
 set +ex 
 # if [ "$0" = "$BASH_SOURCE" ]
 # then
