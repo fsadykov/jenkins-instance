@@ -1,5 +1,6 @@
 #!/bin/bash
 echo $0
+set +ex 
 # if [ "$0" = "$BASH_SOURCE" ]
 # then
 #    echo "$0: Please source this file."
@@ -17,10 +18,6 @@ fi
 # Get directory we are running from
 DIR=$(pwd)
 DATAFILE="$DIR/$1"
-# if [ ! -d "$DIR/configurations" ]; then
-#     echo "setenv: Must be run from the root directory of the terraform project."
-#     return 1
-# fi
 if [ ! -f "$DATAFILE" ]; then
     echo "setenv: Configuration file not found: $DATAFILE"
     return 1
