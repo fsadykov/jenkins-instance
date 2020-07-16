@@ -83,8 +83,9 @@ def slavePodTemplate = """
                             } else {
                                 println("Planing the changes")
                                 sh """
-                                set +ex 
                                 #!/bin/bash
+                                set +ex
+                                ls -l
                                 export AWS_DEFAULT_REGION=${aws_region}
                                 source setenv.sh dev.tfvars
                                 terraform plan
